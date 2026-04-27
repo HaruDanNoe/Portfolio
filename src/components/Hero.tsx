@@ -33,7 +33,7 @@ export default function Hero() {
             
             {/* ✅ Functional Download CV */}
             <a
-              href="/file/Danea_CV.pdf"
+              href="/components/file/Danea_CV.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-primary text-dark font-bold px-8 py-4 rounded-full flex items-center gap-2 hover:bg-primary-dark transition-all duration-300 transform hover:scale-105"
