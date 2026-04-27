@@ -12,9 +12,9 @@ export default function Navbar() {
         <div className="flex justify-between h-20 items-center">
           <div className="flex-shrink-0 flex items-center gap-2">
             <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center font-display font-bold text-xl">
-              N
+              K
             </div>
-            <span className="font-display font-bold text-2xl tracking-tighter">NIMBUS</span>
+            <span className="font-display font-bold text-2xl tracking-tighter">KIREI</span>
           </div>
 
           {/* Desktop Menu */}
