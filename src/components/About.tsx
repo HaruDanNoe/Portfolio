@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Palette, Camera, Laptop } from 'lucide-react';
+import { Palette, LayoutGrid, Laptop } from 'lucide-react';
 import type { ReactNode } from 'react';
 
 export default function About() {
