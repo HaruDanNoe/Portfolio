@@ -6,6 +6,7 @@ export default function Hero() {
   return (
     <section id="home" className="pt-32 pb-20 overflow-hidden min-h-screen flex items-center">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -15,23 +16,35 @@ export default function Hero() {
             <MousePointer2 size={16} />
             Based in Bacolod City, Philippines
           </div>
+
           <h1 className="font-display text-6xl md:text-8xl font-bold leading-[0.9] tracking-tight mb-6">
             Hi! I'm Danea <br />
             <span className="text-primary italic">Zerudo -</span> <br />
-           Web Designer
+            Web Designer
           </h1>
+
           <p className="text-gray-600 text-lg md:text-xl max-w-lg mb-8 leading-relaxed">
-           I create simple, user-friendly, and visually engaging digital experiences. 
-           I focus on designing interfaces that are not just beautiful, 
-           but easy to understand and use.
+            I create simple, user-friendly, and visually engaging digital experiences. 
+            I focus on designing interfaces that are not just beautiful, 
+            but easy to understand and use.
           </p>
+
           <div className="flex flex-wrap gap-4">
-            <button className="bg-primary text-dark font-bold px-8 py-4 rounded-full flex items-center gap-2 hover:bg-primary-dark transition-all duration-300 transform hover:scale-105">
+            
+            {/* ✅ Functional Download CV */}
+            <a
+              href="/file/Danea_CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-primary text-dark font-bold px-8 py-4 rounded-full flex items-center gap-2 hover:bg-primary-dark transition-all duration-300 transform hover:scale-105"
+            >
               Download CV
-            </button>
+            </a>
+
             <button className="bg-dark text-white font-bold px-8 py-4 rounded-full flex items-center gap-2 hover:bg-gray-800 transition-all duration-300 transform hover:scale-105">
               My Works <ArrowRight size={18} />
             </button>
+
           </div>
         </motion.div>
 
@@ -45,16 +58,17 @@ export default function Hero() {
           <div className="blob-shape bg-primary/30 w-full aspect-square absolute top-10 left-10 -z-10 animate-bounce transition-all duration-[2000ms]"></div>
           
           <img
-            src={profilePic}            
+            src={profilePic}
             alt="Danea Zerudo"
-className="blob-shape w-full aspect-square object-cover object-[center_30%] shadow-2xl hover:scale-105 transition-all duration-700"          />
-          
-          {/* Decorative elements */}
+            className="blob-shape w-full aspect-square object-cover object-[center_30%] shadow-2xl hover:scale-105 transition-all duration-700"
+          />
+
           <div className="absolute -top-4 -right-4 w-20 h-20 border-8 border-primary rounded-full animate-spin-slow"></div>
           <div className="absolute -bottom-8 -left-8 font-display text-9xl font-black text-gray-200 -z-20 opacity-40 select-none">
             HELLO
           </div>
         </motion.div>
+
       </div>
     </section>
   );
