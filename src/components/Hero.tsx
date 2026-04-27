@@ -13,7 +13,7 @@ export default function Hero() {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 text-dark font-medium text-sm mb-6">
             <MousePointer2 size={16} />
-            Based in New York, US
+            Based in Bacolod City, Philippines
           </div>
           <h1 className="font-display text-6xl md:text-8xl font-bold leading-[0.9] tracking-tight mb-6">
             Hi! I'm Danea <br />
