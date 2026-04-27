@@ -15,7 +15,7 @@ export default function Projects() {
             </span>
             <h2 className="font-display text-4xl md:text-5xl font-bold">
               Check out my <br />
-              <span className="text-primary italic">Latest Projects</span>
+              <span className="text-primary italic">Projects</span>
             </h2>
           </div>
 
