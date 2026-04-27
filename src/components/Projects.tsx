@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import { PROJECTS } from '../constants';
 import { ExternalLink, Plus } from 'lucide-react';
 
+
 export default function Projects() {
   return (
     <section id="projects" className="py-24 bg-white">
@@ -76,15 +77,12 @@ export default function Projects() {
                         rel="noopener noreferrer"
                         className="mt-4 inline-block px-4 py-2 bg-primary text-dark rounded-full text-sm font-bold hover:scale-105 transition-transform"
                       >
-                        Live Preview
+                        Case Study Preview
                       </a>
                     )}
                   </div>
 
-                  {/* ICON */}
-                  <div className="w-14 h-14 bg-primary text-dark rounded-full flex items-center justify-center transform translate-y-10 group-hover:translate-y-0 transition-transform duration-500 delay-100">
-                    <ExternalLink size={24} />
-                  </div>
+                
 
                 </div>
               </div>

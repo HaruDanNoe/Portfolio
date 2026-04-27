@@ -11,7 +11,7 @@ export const PROJECTS = [
     id: 1,
     title: 'Masskara Festival Website',
     category: 'Web Design',
-    image: 'https://images.unsplash.com/photo-1470219556762-1771e7f9427d?q=80&w=2070&auto=format&fit=crop',
+    image: '/project1.png',
     description: 'A vibrant festival website showcasing the Masskara Festival of Bacolod City.',
     link: 'https://masskara-festival-city-of-smiles.vercel.app/'
   },
