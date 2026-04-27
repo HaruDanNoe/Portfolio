@@ -21,8 +21,9 @@ export default function Hero() {
            Web Designer
           </h1>
           <p className="text-gray-600 text-lg md:text-xl max-w-lg mb-8 leading-relaxed">
-            Product Designer and Digital Creative Director working in design field for 
-            13 years so far, specialized in UI/UX, Branding and digital designs.
+           I create simple, user-friendly, and visually engaging digital experiences. 
+           I focus on designing interfaces that are not just beautiful, 
+           but easy to understand and use.
           </p>
           <div className="flex flex-wrap gap-4">
             <button className="bg-primary text-dark font-bold px-8 py-4 rounded-full flex items-center gap-2 hover:bg-primary-dark transition-all duration-300 transform hover:scale-105">
