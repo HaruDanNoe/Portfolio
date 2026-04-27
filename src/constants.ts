@@ -9,10 +9,11 @@ export const NAVIGATION = [
 export const PROJECTS = [
   {
     id: 1,
-    title: 'Modern E-commerce',
+    title: 'Masskara Festival Website',
     category: 'Web Design',
-    image: 'https://images.unsplash.com/photo-1523474253046-2cd2c78a9dc1?q=80&w=2070&auto=format&fit=crop',
-    description: 'A sleek, high-conversion online store for a premium fashion brand.',
+    image: 'https://images.unsplash.com/photo-1470219556762-1771e7f9427d?q=80&w=2070&auto=format&fit=crop',
+    description: 'A vibrant festival website showcasing the Masskara Festival of Bacolod City.',
+    link: 'https://masskara-festival-city-of-smiles.vercel.app/'
   },
   {
     id: 2,
