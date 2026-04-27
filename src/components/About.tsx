@@ -33,14 +33,14 @@ export default function About() {
           />
           <AboutCard 
             icon={<Camera className="text-dark" />} 
-            title="Photographer" 
-            desc="Awesome photo & video." 
+            title="Layout Designer" 
+            desc="Clean and structured visual layouts."
             active
           />
           <AboutCard 
             icon={<Palette className="text-dark" />} 
-            title="Freelancer" 
-            desc="You can hire me now." 
+            title="Graphic Designer" 
+            desc="Creative visuals and branding designs." 
           />
         </div>
 
