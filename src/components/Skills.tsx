@@ -1,18 +1,41 @@
 import { motion } from 'motion/react';
-import { SKILLS, SOFTWARE_SKILLS } from '../constants';
 import * as Icons from 'lucide-react';
+
+// SKILL DATA
+const SKILLS = [
+  { name: 'UI/UX Design', percentage: 90 },
+  { name: 'Layout Design', percentage: 85 },
+  { name: 'Graphic Design', percentage: 70 },
+  { name: 'Written Communication', percentage: 65 },
+];
+
+// SOFTWARE / TOOLS
+const SOFTWARE_SKILLS = [
+  { name: 'Figma', icon: 'Figma' },
+  { name: 'Canva', icon: 'Palette' },
+  { name: 'Photoshop', icon: 'Image' },
+  { name: 'HTML', icon: 'Code2' },
+  { name: 'CSS', icon: 'Code' },
+  { name: 'JavaScript', icon: 'Braces' },
+];
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24 bg-gray-50 overflow-hidden">
+    <section id="skills" className="py-24 bg-gray-50 overflow-hidden relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
         <div className="flex flex-col lg:flex-row gap-20 items-center">
+          
+          {/* LEFT: SKILL BARS */}
           <div className="w-full lg:w-1/2">
-            <span className="font-display text-primary font-bold uppercase tracking-widest text-sm mb-4 block">My Skills</span>
+            <span className="font-display text-primary font-bold uppercase tracking-widest text-sm mb-4 block">
+              My Skills
+            </span>
+
             <h2 className="font-display text-4xl md:text-5xl font-bold mb-8">
               What My Design <br /> Skills Included
             </h2>
-            
+
             <div className="space-y-8">
               {SKILLS.map((skill, index) => (
                 <div key={index}>
@@ -20,6 +43,7 @@ export default function Skills() {
                     <span className="font-bold text-dark">{skill.name}</span>
                     <span className="text-gray-500">{skill.percentage}%</span>
                   </div>
+
                   <div className="h-3 w-full bg-gray-200 rounded-full overflow-hidden">
                     <motion.div
                       initial={{ width: 0 }}
@@ -33,9 +57,11 @@ export default function Skills() {
             </div>
           </div>
 
+          {/* RIGHT: SOFTWARE SKILLS */}
           <div className="w-full lg:w-1/2 grid grid-cols-2 md:grid-cols-3 gap-6">
             {SOFTWARE_SKILLS.map((skill, index) => {
               const IconComponent = (Icons as any)[skill.icon];
+
               return (
                 <motion.div
                   key={index}
@@ -43,16 +69,21 @@ export default function Skills() {
                   className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 flex flex-col items-center justify-center gap-4 hover:shadow-xl hover:border-primary transition-all group"
                 >
                   <div className="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center group-hover:bg-primary transition-colors">
-                    {IconComponent && <IconComponent size={32} className="text-dark" />}
+                    {IconComponent && (
+                      <IconComponent size={32} className="text-dark" />
+                    )}
                   </div>
-                  <span className="font-bold text-dark">{skill.name}</span>
+
+                  <span className="font-bold text-dark text-center">
+                    {skill.name}
+                  </span>
                 </motion.div>
               );
             })}
           </div>
         </div>
       </div>
-      
+
       {/* Background decoration */}
       <div className="absolute right-0 top-0 -translate-y-1/2 translate-x-1/2 font-display text-[20rem] font-black text-gray-100 -z-10">
         SKILLS
