@@ -25,10 +25,9 @@ export default function About() {
               <span className="text-primary italic">I can Help You!</span>
             </h2>
             <p className="text-gray-600 text-lg mb-8 leading-relaxed">
-              Product Designer and Digital Creative Director working in design field for 
-              13 years so far, specialized in UI/UX, Branding and digital designs. These 
-              are the words we live by in everything we do. Every story we tell, every brand 
-              we build, and every interaction we create must not only look beautiful, beautifully, too.
+              I create simple, user-friendly, and visually engaging digital experiences. 
+              I focus on designing interfaces that are not just beautiful, 
+              but easy to understand and use.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
