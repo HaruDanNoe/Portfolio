@@ -11,7 +11,7 @@ export const PROJECTS = [
     id: 1,
     title: 'Masskara Festival Website',
     category: 'Web Design',
-    image: '/project1.png',
+    image: '/file/project1.png',
     description: 'A vibrant festival website showcasing the Masskara Festival of Bacolod City.',
     link: 'https://masskara-festival-city-of-smiles.vercel.app/'
   },
