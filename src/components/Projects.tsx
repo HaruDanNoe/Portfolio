@@ -54,7 +54,7 @@ export default function Projects() {
                 />
               </div>
 
-              {/* DESKTOP HOVER OVERLAY */}
+              {/* DESKTOP OVERLAY */}
               <div className="absolute inset-0 bg-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-10 text-white">
 
                 <div className="flex justify-between items-center">
@@ -68,10 +68,10 @@ export default function Projects() {
                       {project.title}
                     </h3>
 
-                    {/* ✅ MASSKARA LIVE PREVIEW BUTTON */}
-                    {project.title.toLowerCase().includes('masskara') && (
+                    {/* LIVE PREVIEW BUTTON */}
+                    {project.link && (
                       <a
-                        href="https://masskara-festival-city-of-smiles.vercel.app/"
+                        href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="mt-4 inline-block px-4 py-2 bg-primary text-dark rounded-full text-sm font-bold hover:scale-105 transition-transform"
@@ -94,14 +94,15 @@ export default function Projects() {
                 <span className="text-primary font-bold text-xs uppercase tracking-wider mb-1 block">
                   {project.category}
                 </span>
+
                 <h3 className="text-xl font-display font-bold text-dark">
                   {project.title}
                 </h3>
 
                 {/* MOBILE LINK */}
-                {project.title.toLowerCase().includes('masskara') && (
+                {project.link && (
                   <a
-                    href="https://masskara-festival-city-of-smiles.vercel.app/"
+                    href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-3 inline-block text-sm text-primary font-bold underline"
