@@ -32,7 +32,7 @@ export default function About() {
             desc="Creative websites for you." 
           />
           <AboutCard 
-            icon={<Camera className="text-dark" />} 
+            icon={<LayoutGrid className="text-dark" />} 
             title="Layout Designer" 
             desc="Clean and structured visual layouts."
             active
