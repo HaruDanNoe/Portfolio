@@ -20,8 +20,9 @@ export default function About() {
 
         {/* Description */}
         <p className="text-gray-600 text-lg mb-12 leading-relaxed max-w-2xl">
-          I create simple, user-friendly, and visually engaging digital experiences. 
-          I focus on designing interfaces that are not just beautiful, but easy to understand and use.
+          I’m a BSIT student and aspiring web designer with a passion for UI/UX design and front-end development. I enjoy turning ideas into clean and functional designs using tools like Figma and modern web technologies.
+
+I believe that good design is not just about how it looks, but how it works. Every project I create is focused on clarity, usability, and meaningful user experience.
         </p>
 
         {/* Cards */}
