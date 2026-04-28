@@ -20,7 +20,7 @@ export default function Contact() {
             <div className="space-y-6 mb-12">
               <ContactInfo icon={<Mail className="text-primary" />} text="eldaneazerudo@gmail.com" label="Email Me" />
               <ContactInfo icon={<Phone className="text-primary" />} text="+639 096 762 817" label="Call Me" />
-              <ContactInfo icon={<MapPin className="text-primary" />} text="Brooklyn, New York, US" label="Visit Me" />
+              <ContactInfo icon={<MapPin className="text-primary" />} text="Bacolod City, Philippines" label="Visit Me" />
             </div>
 
             <div className="flex gap-4">
