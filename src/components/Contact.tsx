@@ -18,8 +18,8 @@ export default function Contact() {
             </h2>
             
             <div className="space-y-6 mb-12">
-              <ContactInfo icon={<Mail className="text-primary" />} text="nimbus2000@mail.com" label="Email Me" />
-              <ContactInfo icon={<Phone className="text-primary" />} text="+1 (555) 000-0000" label="Call Me" />
+              <ContactInfo icon={<Mail className="text-primary" />} text="eldaneazerudo@gmail.com" label="Email Me" />
+              <ContactInfo icon={<Phone className="text-primary" />} text="+639 096 762 817" label="Call Me" />
               <ContactInfo icon={<MapPin className="text-primary" />} text="Brooklyn, New York, US" label="Visit Me" />
             </div>
 
