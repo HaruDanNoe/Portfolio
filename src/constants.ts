@@ -17,10 +17,11 @@ export const PROJECTS = [
   },
   {
     id: 2,
-    title: 'Financial Dashboard',
-    category: 'UI/UX Design',
-    image: 'https://images.unsplash.com/photo-1551288049-bbdac8626ad1?q=80&w=2070&auto=format&fit=crop',
-    description: 'Complex data simplified through intuitive design and clear visual hierarchy.',
+    title: 'Eco Track',
+    category: 'Mobile App Design',
+    image: '/file/project2.png',
+    description: 'EcoTrack transforms eco-awareness into action through gamified habit tracking.',
+    link: 'https://ecotrack-case-study.vercel.app/'
   },
   {
     id: 3,
