@@ -40,7 +40,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-400 mb-2">Your Name</label>
-                  <input type="text" className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 focus:outline-none focus:border-primary transition-colors" placeholder="Ameli Nimbus" />
+                  <input type="text" className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 focus:outline-none focus:border-primary transition-colors" placeholder="Danea Zerudo" />
                 </div>
               </div>
               <div>
