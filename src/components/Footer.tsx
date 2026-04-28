@@ -5,13 +5,13 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center font-display font-bold text-dark">
-              N
+              K
             </div>
-            <span className="font-display font-bold text-xl tracking-tighter text-white">NIMBUS</span>
+            <span className="font-display font-bold text-xl tracking-tighter text-white">KIREI</span>
           </div>
           
           <div className="text-sm">
-            © {new Date().getFullYear()} Nimbus Portfolio. All rights reserved.
+            © {new Date().getFullYear()} Kirei Portfolio. All rights reserved.
           </div>
           
           <div className="flex gap-8 text-sm">
