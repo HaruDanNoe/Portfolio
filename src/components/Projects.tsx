@@ -1,9 +1,12 @@
 import { motion } from 'motion/react';
 import { PROJECTS } from '../constants';
-import { ExternalLink, Plus } from 'lucide-react';
-
+import { Plus } from 'lucide-react';
+import { useState } from 'react';
 
 export default function Projects() {
+  const [filter, setFilter] = useState('All');
+  const [showAll, setShowAll] = useState(false);
+
   return (
     <section id="projects" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -20,15 +23,50 @@ export default function Projects() {
             </h2>
           </div>
 
-          <div className="flex gap-4">
-            <button className="px-6 py-2 bg-dark text-white rounded-full text-sm font-bold">
+          {/* FILTER BUTTONS */}
+          <div className="flex gap-4 flex-wrap">
+            <button
+              onClick={() => setFilter('All')}
+              className={`px-6 py-2 rounded-full text-sm font-bold transition-all ${
+                filter === 'All'
+                  ? 'bg-dark text-white'
+                  : 'bg-gray-100 text-gray-500 hover:bg-primary hover:text-dark'
+              }`}
+            >
               All
             </button>
-            <button className="px-6 py-2 bg-gray-100 text-gray-500 rounded-full text-sm font-bold hover:bg-primary hover:text-dark transition-all">
+
+            <button
+              onClick={() => setFilter('Web Design')}
+              className={`px-6 py-2 rounded-full text-sm font-bold transition-all ${
+                filter === 'Web Design'
+                  ? 'bg-dark text-white'
+                  : 'bg-gray-100 text-gray-500 hover:bg-primary hover:text-dark'
+              }`}
+            >
               Web Design
             </button>
-            <button className="px-6 py-2 bg-gray-100 text-gray-500 rounded-full text-sm font-bold hover:bg-primary hover:text-dark transition-all">
+
+            <button
+              onClick={() => setFilter('UI/UX')}
+              className={`px-6 py-2 rounded-full text-sm font-bold transition-all ${
+                filter === 'UI/UX'
+                  ? 'bg-dark text-white'
+                  : 'bg-gray-100 text-gray-500 hover:bg-primary hover:text-dark'
+              }`}
+            >
               UI/UX
+            </button>
+
+            <button
+              onClick={() => setFilter('Design')}
+              className={`px-6 py-2 rounded-full text-sm font-bold transition-all ${
+                filter === 'Design'
+                  ? 'bg-dark text-white'
+                  : 'bg-gray-100 text-gray-500 hover:bg-primary hover:text-dark'
+              }`}
+            >
+              Layout & Graphic
             </button>
           </div>
         </div>
@@ -36,29 +74,48 @@ export default function Projects() {
         {/* PROJECT GRID */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
 
-          {PROJECTS.map((project, index) => (
-            <motion.div
-              key={project.id}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="group relative overflow-hidden rounded-[2.5rem] bg-gray-100"
-            >
+          {PROJECTS
+            .filter((project) => {
+              if (filter === 'All') return true;
 
-              {/* IMAGE */}
-              <div className="aspect-[16/10] overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-              </div>
+              if (filter === 'Design') {
+                return (
+                  project.category === 'Layout Design' ||
+                  project.category === 'Graphic Design'
+                );
+              }
 
-              {/* DESKTOP OVERLAY */}
-              <div className="absolute inset-0 bg-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-10 text-white">
+              return project.category === filter;
+            })
+            .slice(0, showAll ? PROJECTS.length : 4)
+            .map((project, index) => (
+              <motion.div
+                key={project.id}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group relative overflow-hidden rounded-[2.5rem] bg-gray-100"
+              >
 
-                <div className="flex justify-between items-center">
+                {/* IMAGE (AUTO STYLE BASED ON CATEGORY) */}
+                <div
+                  className={`overflow-hidden ${
+                    project.category === 'Layout Design' ||
+                    project.category === 'Graphic Design'
+                      ? 'aspect-[4/5]'   // 📸 PHOTO STYLE
+                      : 'aspect-[16/10]' // 💻 PROJECT STYLE
+                  }`}
+                >
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                </div>
+
+                {/* DESKTOP OVERLAY */}
+                <div className="absolute inset-0 bg-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-10 text-white">
 
                   <div>
                     <span className="text-primary font-bold text-sm uppercase tracking-wider mb-2 block">
@@ -69,7 +126,6 @@ export default function Projects() {
                       {project.title}
                     </h3>
 
-                    {/* LIVE PREVIEW BUTTON */}
                     {project.link && (
                       <a
                         href={project.link}
@@ -82,43 +138,42 @@ export default function Projects() {
                     )}
                   </div>
 
-                
-
                 </div>
-              </div>
 
-              {/* MOBILE VIEW */}
-              <div className="p-8 md:hidden bg-white">
-                <span className="text-primary font-bold text-xs uppercase tracking-wider mb-1 block">
-                  {project.category}
-                </span>
+                {/* MOBILE VIEW */}
+                <div className="p-8 md:hidden bg-white">
+                  <span className="text-primary font-bold text-xs uppercase tracking-wider mb-1 block">
+                    {project.category}
+                  </span>
 
-                <h3 className="text-xl font-display font-bold text-dark">
-                  {project.title}
-                </h3>
+                  <h3 className="text-xl font-display font-bold text-dark">
+                    {project.title}
+                  </h3>
 
-                {/* MOBILE LINK */}
-                {project.link && (
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-3 inline-block text-sm text-primary font-bold underline"
-                  >
-                    View Live Site
-                  </a>
-                )}
-              </div>
+                  {project.link && (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-3 inline-block text-sm text-primary font-bold underline"
+                    >
+                      View Live Site
+                    </a>
+                  )}
+                </div>
 
-            </motion.div>
-          ))}
-
+              </motion.div>
+            ))}
         </div>
 
         {/* FOOTER BUTTON */}
         <div className="mt-16 text-center">
-          <button className="inline-flex items-center gap-2 group font-display font-bold text-xl hover:text-primary transition-colors">
-            View All Projects
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="inline-flex items-center gap-2 group font-display font-bold text-xl hover:text-primary transition-colors"
+          >
+            {showAll ? 'Show Less' : 'View All Projects'}
+
             <div className="w-10 h-10 bg-primary text-dark rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
               <Plus size={20} />
             </div>
