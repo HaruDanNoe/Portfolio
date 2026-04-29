@@ -25,35 +25,41 @@ export const PROJECTS = [
   },
   {
     id: 3,
-    title: 'Eco Track',
-    category: 'UI/UX',
-    image: '/file/project2.png',
-    description: 'EcoTrack transforms eco-awareness into action through gamified habit tracking.',
-    link: 'https://ecotrack-case-study.vercel.app/'
+    title: 'Snailed',
+    category: 'Web Design',
+    image: '/file/snailed.png',
+    link: 'https://snailed-case-study.vercel.app/'
   },
   {
     id: 4,
+    title: 'Paw',
+    category: 'Web Design',
+    image: '/file/snailed.png',
+    link: 'https://ecotrack-case-study.vercel.app/'
+  },
+  {
+    id: 5,
     title: 'Bihis Lokal',
     category: 'Layout Design',
     image: '/file/BihisLokal.png',
     description: 'A vibrant social platform designed to bring local communities together.',
   },
   {
-    id: 5,
+    id: 6,
     title: 'Sanguine',
     category: 'Graphic Design',
     image: '/file/Sanguine.jpg',
     description: 'Complete brand identity and web presence for a luxury travel agency.',
   },
   {
-    id: 6,
+    id: 7,
     title: 'Thread of Your Fate',
     category: 'Layout Design',
     image: '/file/ToYf.png',
     description: 'Complete brand identity and web presence for a luxury travel agency.',
   },
   {
-    id: 7,
+    id: 8,
     title: 'Living the Lasallian Vibe',
     category: 'Layout Design',
     image: '/file/LtLV.png',
