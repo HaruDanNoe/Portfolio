@@ -63,9 +63,7 @@ export default function Navbar() {
                 {item.name}
               </a>
             ))}
-            <button className="bg-dark text-white w-full py-3 rounded-full text-sm font-semibold">
-              Hire Me
-            </button>
+           
           </div>
         </motion.div>
       )}
