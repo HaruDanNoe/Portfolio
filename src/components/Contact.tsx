@@ -43,7 +43,7 @@ export default function Contact() {
             />
             <SocialBtn
               icon={<Linkedin size={18} />}
-              href="www.linkedin.com/in/danea-zerudo-9b0290325"
+              href="https://www.linkedin.com/in/danea-zerudo-9b0290325/"
             />
           </div>
 
