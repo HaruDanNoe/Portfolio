@@ -28,9 +28,7 @@ export default function Navbar() {
                 {item.name}
               </a>
             ))}
-            <button className="bg-dark text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-gray-800 transition-colors duration-200">
-              Hire Me
-            </button>
+           
           </div>
 
           {/* Mobile Menu Button */}
