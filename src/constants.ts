@@ -34,8 +34,8 @@ export const PROJECTS = [
     id: 4,
     title: 'Paw',
     category: 'Web Design',
-    image: '/file/snailed.png',
-    link: 'https://ecotrack-case-study.vercel.app/'
+    image: '/file/paw.png',
+    link: 'https://pawprint-phi.vercel.app/'
   },
   {
     id: 5,
