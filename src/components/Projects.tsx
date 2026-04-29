@@ -55,7 +55,7 @@ export default function Projects() {
                   : 'bg-gray-100 text-gray-500 hover:bg-primary hover:text-dark'
               }`}
             >
-              UI/UX
+              UI/UX Mobile - Web
             </button>
 
             <button
