@@ -33,7 +33,7 @@ export const PROJECTS = [
   {
     id: 4,
     title: 'Paw',
-    category: 'Web Design',
+    category: 'UI/UX',
     image: '/file/paw.png',
     link: 'https://pawprint-phi.vercel.app/'
   },
