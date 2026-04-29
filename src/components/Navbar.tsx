@@ -63,7 +63,7 @@ export default function Navbar() {
                 {item.name}
               </a>
             ))}
-           
+            
           </div>
         </motion.div>
       )}
